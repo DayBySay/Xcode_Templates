@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.storyboardApplication</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Definitions</key>
+	<dict>
+		<key>___VARIABLE_classPrefix:identifier___ViewController.m:private</key>
+		<string>@interface ___VARIABLE_classPrefix:identifier___ViewController ()
+
+@end
+</string>
+        <key>___PACKAGENAME___-Prefix.pch:debuglog</key>
+        <string>
+#ifdef DEBUG
+    #define LOG(A, ...) NSLog(@"DEBUG: %s:%d:%@", __PRETTY_FUNCTION__,__LINE__,[NSString stringWithFormat:A, ## __VA_ARGS__]);
+    #define LOG_PRINTF(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+    #define LOG_METHOD NSLog(@"%s", __func__)
+    #define LOG_METHOD_AND_ABORT LOG_METHOD; abort()
+#else
+    #define LOG(...)
+    #define LOG_PRINTF(FORMAT, ...)
+    #define LOG_METHOD
+    #define LOG_METHOD_AND_ABORT
+#endif
+
+#ifdef DEBUG
+    #define LOG_POINT(p) NSLog(@"%f, %f", p.x, p.y)
+    #define LOG_SIZE(p) NSLog(@"%f, %f", p.width, p.height)
+    #define LOG_RECT(p) NSLog(@"%f, %f - %f, %f", p.origin.x, p.origin.y, p.size.width, p.size.height)
+#else
+    #define LOG_POINT(p)
+    #define LOG_SIZE(p)
+    #define LOG_RECT(p)
+#endif
+
+#if DEBUG
+@interface UIView (DebugPrivate)
+- (NSString*)recursiveDescription;
+@end
+#endif
+</string>
+    </dict>
+	<key>Description</key>
+	<string>This template provides a starting point for an application that uses a single view. It provides a view controller to manage the view, and a storyboard or nib file that contains the view.</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.prhSingleViewApplication</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Nodes</key>
+	<array>
+		<string>___VARIABLE_classPrefix:identifier___ViewController.h:viewControllerInterface</string>
+		<string>___VARIABLE_classPrefix:identifier___ViewController.m:comments</string>
+		<string>___VARIABLE_classPrefix:identifier___ViewController.m:import:___VARIABLE_classPrefix:identifier___ViewController.h</string>
+		<string>___VARIABLE_classPrefix:identifier___ViewController.m:private</string>
+		<string>___VARIABLE_classPrefix:identifier___ViewController.m:implementation:viewDidLoad</string>
+		<string>___VARIABLE_classPrefix:identifier___ViewController.m:implementation:didReceiveMemoryWarning</string>
+        <string>___PACKAGENAME___-Prefix.pch:debuglog</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>universalDeviceFamily</string>
+			<key>Units</key>
+			<dict>
+				<key>Universal</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Base.lproj/Main_iPad.storyboard</key>
+						<dict>
+							<key>Path</key>
+							<string>Main_iPad.storyboard</string>
+						</dict>
+						<key>Base.lproj/Main_iPhone.storyboard</key>
+						<dict>
+							<key>Path</key>
+							<string>Main_iPhone.storyboard</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>iPad</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Base.lproj/Main.storyboard</key>
+						<dict>
+							<key>Path</key>
+							<string>Main_iPad.storyboard</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>iPhone</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Base.lproj/Main.storyboard</key>
+						<dict>
+							<key>Path</key>
+							<string>Main_iPhone.storyboard</string>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>SortOrder</key>
+	<integer>1</integer>
+</dict>
+</plist>
