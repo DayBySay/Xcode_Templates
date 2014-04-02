@@ -18,7 +18,7 @@
         <key>___PACKAGENAME___-Prefix.pch:debuglog</key>
         <string>
 #ifdef DEBUG
-    #define LOG(A, ...) NSLog(@"DEBUG: %s:%d:%@", __PRETTY_FUNCTION__,__LINE__,[NSString stringWithFormat:A, ## __VA_ARGS__]);
+    #define LOG(A, ...) NSLog(@"name:%s func:%s line:%d variable:%@",  __FILE__, __PRETTY_FUNCTION__,__LINE__,[NSString stringWithFormat:A, ## __VA_ARGS__]);
     #define LOG_PRINTF(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
     #define LOG_METHOD NSLog(@"%s", __func__)
     #define LOG_METHOD_AND_ABORT LOG_METHOD; abort()
