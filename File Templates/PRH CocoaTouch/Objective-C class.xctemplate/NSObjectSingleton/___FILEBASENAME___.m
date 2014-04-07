@@ -10,15 +10,16 @@
 
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
-static id instance = nil;
+static id sharedInstance = nil;
 
 + (id)sharedInstance {
-    @synchronized(self) {
-        if (!instance) {
-            instance = [[self alloc] init];
-        }
-    }
-    return instance;
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+            sharedInstance = [[self alloc] init];
+    });
+
+    return sharedInstance;
 }
 
 @end
