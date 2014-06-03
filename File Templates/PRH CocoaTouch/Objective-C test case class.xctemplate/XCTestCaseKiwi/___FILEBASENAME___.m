@@ -15,7 +15,7 @@ beforeAll(^{
 afterAll(^{
 });
 
-SPEC_BEGIN(@"<#spec#>")
+SPEC_BEGIN(<#spec#>)
 describe(@"<#describe#>", ^{
     context(@"<#context#>", ^{
         it(@"<#it#>", ^{
