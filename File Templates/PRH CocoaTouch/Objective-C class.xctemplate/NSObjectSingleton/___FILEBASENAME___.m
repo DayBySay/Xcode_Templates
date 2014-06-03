@@ -8,12 +8,12 @@
 
 #import "___FILEBASENAME___.h"
 
-@implementation ___FILEBASENAMEASIDENTIFIER___
-
 static id sharedInstance = nil;
 
-+ (id)sharedInstance {
+@implementation ___FILEBASENAMEASIDENTIFIER___
 
++ (id)sharedInstance 
+{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
             sharedInstance = [[self alloc] init];
