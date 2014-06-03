@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Kiwi.h"
+#import "<#testing class#>"
 
 beforeAll(^{
 });
