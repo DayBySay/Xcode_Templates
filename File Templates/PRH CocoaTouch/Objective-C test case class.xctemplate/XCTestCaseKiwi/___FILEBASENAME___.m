@@ -10,13 +10,12 @@
 #import "Kiwi.h"
 #import "<#testing class#>"
 
-beforeAll(^{
-});
-afterAll(^{
-});
-
 SPEC_BEGIN(<#spec#>)
 describe(@"<#describe#>", ^{
+    beforeAll(^{
+    });
+    afterAll(^{
+    });
     context(@"<#context#>", ^{
         it(@"<#it#>", ^{
         });
