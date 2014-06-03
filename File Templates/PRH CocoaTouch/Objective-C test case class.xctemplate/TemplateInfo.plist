@@ -52,6 +52,23 @@
 				<string>SenTestCase</string>
 			</array>
 		</dict>
+        <dict>
+            <key>Default</key>
+            <string>false</string>
+            <key>Identifier</key>
+            <string>Kiwi</string>
+            <key>Name</key>
+            <string>Kiwi</string>
+            <key>RequiredOptions</key>
+            <dict>
+                <key>cocoaTouchSubclass</key>
+                <array>
+                    <string>XCTestCase</string>
+                </array>
+            </dict>
+            <key>Type</key>
+            <string>checkbox</string>
+        </dict>
 	</array>
 	<key>Platforms</key>
 	<array>
